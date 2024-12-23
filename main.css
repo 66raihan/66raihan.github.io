@@ -23,17 +23,19 @@ body {
 }
 
 nav {
-    background: #002633;
+    /*background: #002633;*/
     height: 40px;
     width: 100%;
+    color: #002633;
 }
 
 label.logo {
-    color: white;
+    color: #f4f8f9;
     font-size: 25px;
     line-height: 40px;
     padding: 0 100px;
     font-weight: bold;
+    display: none;
 }
 
 nav ul {
@@ -48,14 +50,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #002633;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
+    font-weight: bold;
 }
 
 a:hover{
-    background: #47536e;
+    background: #6e9dad;
     transition: .5s;
 }
 
