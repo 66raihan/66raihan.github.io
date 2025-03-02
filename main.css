@@ -116,6 +116,42 @@ nav ul li{
 nav ul li a{
     font-size: 20px;
     color: whitesmoke;
+    display: inline-block;
+    padding-left: 50px;
+}
+
+/*Add symbols when checkbox is checked*/
+#nav-toggle:checked ~ ul li a {
+position: relative;
+padding-left: 30px;
+}
+
+#nav-toggle:checked ~ ul li:nth-child(1) a:before {
+    content: "🏠    ";
+    position:absolute;
+    left: 2px;
+    font-size: 20px;
+}
+
+#nav-toggle:checked ~ ul li:nth-child(2) a:before {
+    content: "ℹ️    ";
+    position:absolute;
+    left: 2px;
+    font-size: 20px;
+}
+
+#nav-toggle:checked ~ ul li:nth-child(3) a:before {
+    content: "📞   ";
+    position:absolute;
+    left: 2px;
+    font-size: 20px;
+}
+
+#nav-toggle:checked ~ ul li:nth-child(4) a:before {
+    content: "✍️    ";
+    position:absolute;
+    left: 2px;
+    font-size: 20px;
 }
 
 /* Show menu when checkbox is checked*/
