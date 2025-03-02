@@ -90,6 +90,7 @@ p {
 @media screen and (max-width: 768px) {
     .menu-btn {
         display: block;/* Show menu button on mobile*/
+        font-size: 70px;
 }
 
  nav ul {
