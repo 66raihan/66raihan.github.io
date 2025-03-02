@@ -25,7 +25,7 @@ body {
 }
 
 nav {
-    height: 60px; /* increased height for better touch targer */
+    height: 80px; /* increased height for better touch targer */
     width: 100%;
     position: relative; /* made the position relative */
 }
@@ -38,7 +38,7 @@ input[type="checkbox"]{
 /* Style menu button*/
 .menu-btn {
     color: whitesmoke;
-    font-size: 25 px;
+    font-size: 50 px;
     cursor: pointer;
     display: none;/* hidden on desktop*/
     position: absolute;
@@ -97,7 +97,7 @@ p {
     width: 100%;
     height: 100vh;
     background: rgba(0, 38, 51, 0.9);
-    top: 60px;
+    top: 80px;
     left: -100%;
     text-align: center;
     transition: all .3s;
