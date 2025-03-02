@@ -105,6 +105,7 @@ p {
     margin: 0;
     padding: 20px 0;
     overflow-y: auto;
+    border-radius: 15px;
  }
 
 nav ul li{
