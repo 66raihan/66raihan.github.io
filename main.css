@@ -12,6 +12,8 @@ body {
     color:whitesmoke;
     font-size: 1.10em;
     font-family: montserrat;
+    margin: 0;
+    padding: 20px;
 }
 
 * {
@@ -23,8 +25,25 @@ body {
 }
 
 nav {
-    height: 40px;
+    height: 60px; /* increased height for better touch targer */
     width: 100%;
+    position: relative; /* made the position relative */
+}
+
+/* hide checkbox */
+input[type="checkbox"]{
+    display: none;
+}
+
+/* Style menu button*/
+.menu-btn {
+    color: whitesmoke;
+    font-size: 25 px;
+    cursor: pointer;
+    display: none;/* hidden on desktop*/
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 nav ul {
@@ -34,23 +53,17 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    line-height: 80px;
+    line-height: 60px; /* adjusted from 80 to match the display height*/
     margin: 0 5px;
 }
 
 nav ul li a {
     color: #002633;
-    font-size: 40px;
+    font-size: 24px; /* reduced from 40 for better scaling*/
     padding: 7px 13px;
     border-radius: 3px;
     font-weight: bold;
-    /*text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white;*/
-
-    -webkit-text-stroke: 0.5px white;
+    -webkit-text-stroke: 0.5px rgb(190, 190, 190);
 
 }
 
@@ -59,6 +72,81 @@ a:hover{
     transition: .5s;
 }
 
+/* Content styling*/
+h1 {
+    margin-top: 20vh; /* Responsice vertical spacing*/
+    font-size: 1.2em;
+}
 
+h2{
+    font-size: 1.8em;
+}
 
+p {
+    font-size: 1.2em;
+}
 
+/* Media query for mobile devices*/
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;/* Show menu button on mobile*/
+}
+
+ nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 38, 51, 0.9);
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    transition: all .3s;
+    margin: 0;
+    padding: 0;
+ }
+
+nav ul li{
+    display: block;
+    margin: 20px 0;
+    line-height: 30px;
+}
+ 
+nav ul li a{
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+/* Show menu when checkbox is checked*/
+#nav-toggle:checked ~ ul {
+    left: 0;
+}
+
+h1 {
+font-size: 1.8em;
+}
+
+h2 {
+font-size: 1.4em;
+}
+
+p {
+font-size: 1em;
+}
+
+}
+
+/*For very small screens*/
+@media screen and (max-width: 480px){
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+}
