@@ -13,7 +13,14 @@ body {
     font-size: 1.10em;
     font-family: montserrat;
     margin: 0;
-    padding: 20px;
+    padding:0;
+    display: grid;
+    grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 * {
@@ -25,6 +32,7 @@ body {
 }
 
 nav {
+    grid-area: header;
     height: 80px; /* increased height for better touch targer */
     width: 100%;
     position: relative; /* made the position relative */
@@ -44,6 +52,15 @@ input[type="checkbox"]{
     position: absolute;
     right: 20px;
     top: 20px;
+    z-index: 20;
+}
+
+.menu-btn::before {
+    content: "☰"
+}
+
+#nav-toggle:checked + .menu-btn::before {
+    content: "✕"
 }
 
 nav ul {
@@ -72,6 +89,16 @@ a:hover{
     transition: .5s;
 }
 
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding: 20px;
+    place-items: center;
+}
+
 /* Content styling*/
 h1 {
     margin-top: 20vh; /* Responsice vertical spacing*/
@@ -86,6 +113,15 @@ p {
     font-size: 1.2em;
 }
 
+footer{
+    grid-area: footer;
+    background: rgba(0, 38, 51, 0.9);
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+}
+
 /* Media query for mobile devices*/
 @media screen and (max-width: 768px) {
     .menu-btn {
@@ -98,14 +134,15 @@ p {
     width: 40%;
     height: 50vh;
     background: rgba(0, 38, 51, 0.9);
-    top: 120px;
+    top: 0px;
     right: -100%;
     text-align: left;
     transition: all .3s;
     margin: 0;
-    padding: 20px 0 20px 40px;
+    padding: 100px 0 20px 40px;
     overflow-y: auto;
     border-radius: 15px;
+    z-index: 10;
  }
 
 nav ul li{
@@ -128,28 +165,28 @@ padding-left: 30px;
 }
 
 #nav-toggle:checked ~ ul li:nth-child(1) a:before {
-    content: "🏠    ";
+    content: "🏠";
     position:absolute;
     left: 2px;
     font-size: 20px;
 }
 
 #nav-toggle:checked ~ ul li:nth-child(2) a:before {
-    content: "ℹ️    ";
+    content: "ℹ️";
     position:absolute;
     left: 2px;
     font-size: 20px;
 }
 
 #nav-toggle:checked ~ ul li:nth-child(3) a:before {
-    content: "📞   ";
+    content: "📞";
     position:absolute;
     left: 2px;
     font-size: 20px;
 }
 
 #nav-toggle:checked ~ ul li:nth-child(4) a:before {
-    content: "✍️    ";
+    content: "✍️";
     position:absolute;
     left: 2px;
     font-size: 20px;
