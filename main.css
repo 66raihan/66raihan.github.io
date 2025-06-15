@@ -185,13 +185,13 @@ footer{
 
     .box-container{
     /*padding-top: 40vh;*/
-    width: 80%;
+    width: 50%;
     gap: 1.5rem;
     margin-right: 0;
     }
 
     .box {
-        width: 80%;
+        width: 100%;
         min-height: 120px;
         }
 
