@@ -194,7 +194,7 @@ footer{
     .box {
         width: 100%;
         min-height: 80px;
-        padding: 0;
+        padding: 1rem;
         }
 
     .sub-box1 {
