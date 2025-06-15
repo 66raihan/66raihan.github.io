@@ -163,33 +163,34 @@ footer{
 }
 
 /* Media query for mobile devices*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) 
+{
     .menu-btn {
         display: block;/* Show menu button on mobile*/
         font-size: 70px;
-}
+        }
 
-body {
+    body {
     background-image: url(mobileBackground.jpg);
     background-position: 30% center;
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: scroll;
     /*n*/
-}
+    }
 
-main {
+    main {
     min-height: calc(100vh - 80px - 40px)
     align-items: flex-start;
-}
+    }
 
-.box-container{
-    padding-top: 50vh;
-    width: 80%;
+    .box-container{
+    padding-top: 400vh;
+    width: 50%;
     gap: 1.5rem;
-}
+    }
 
- nav ul {
+    nav ul {
     position: fixed;
     width: 40%;
     height: 50vh;
@@ -203,15 +204,15 @@ main {
     overflow-y: auto;
     border-radius: 15px;
     z-index: 10;
- }
+    }
 
-nav ul li{
+    nav ul li{
     display: block;
     margin: 20px 0;
     line-height: 30px;
-}
+    }
  
-nav ul li a{
+    nav ul li a{
     font-size: 20px;
     color: whitesmoke;
     display: flex;
@@ -219,49 +220,49 @@ nav ul li a{
     padding-top: 15px;
     align-items: center;
     gap: 20px;
+    }
 
-}
+    /*Add symbols when checkbox is checked*/
+    #nav-toggle:checked ~ ul li a {
+    position: relative;
+    padding-left: 5px;
+    }
 
-/*Add symbols when checkbox is checked*/
-#nav-toggle:checked ~ ul li a {
-position: relative;
-padding-left: 5px;
-}
-
-#nav-toggle:checked ~ ul li:nth-child(1) a:before {
+    #nav-toggle:checked ~ ul li:nth-child(1) a:before {
     content: none;
-}
+    }
 
-#nav-toggle:checked ~ ul li:nth-child(2) a:before {
+    #nav-toggle:checked ~ ul li:nth-child(2) a:before {
     content: none;
-}
+    }
 
-#nav-toggle:checked ~ ul li:nth-child(3) a:before {
+    #nav-toggle:checked ~ ul li:nth-child(3) a:before {
     content: none;
-}
+    }
 
-#nav-toggle:checked ~ ul li:nth-child(4) a:before {
+    #nav-toggle:checked ~ ul li:nth-child(4) a:before {
     content: none;
-}
+    }
 
-/* Show menu when checkbox is checked*/
-#nav-toggle:checked ~ ul {
+    /* Show menu when checkbox is checked*/
+    #nav-toggle:checked ~ ul {
     right: 0;
-}
+    }
 
-main {
-flex-direction: column;
-align-items: center;
-}
+    main {
+    flex-direction: column;
+    align-items: center;
+    }
 
-.box-container {
+    .box-container {
     width: 100%;
     margin-right: 0;
-}
+    }
 
-.box {
+    .box {
     width: 100%;
     min-height: 120px;
+    }
 }
 
 /*For very small screens*/
@@ -279,11 +280,4 @@ align-items: center;
     }
 
 }
-/*
-@media only screen and (-webkit-min-device-pixel-ratio: 2), 
-       only screen and (min-resolution: 192dpi) {
-    body {
-        background-size: 70%; /* Slightly smaller for high-DPI */
-    }
-}
-*/
+
