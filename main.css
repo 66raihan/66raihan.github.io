@@ -169,7 +169,7 @@ footer{
 
 body {
     background-image: url(mobileBackground.jpg);
-    background-position: center;
+    background-position: 20% center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
