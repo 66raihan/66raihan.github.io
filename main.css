@@ -111,7 +111,7 @@ flex-direction: column;
 gap: 3rem;
 width: 300px;
 margin-right: 0 auto;
-transform: translateX(10%);
+transform: translateX(50%);
 }
 
 .box {
