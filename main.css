@@ -220,7 +220,7 @@ footer{
     nav ul {
     position: fixed;
     width: 40%;
-    height: 50vh;
+    height: 40vh;
     background: rgba(0, 38, 51, 0.9);
     top: 0px;
     right: -100%;
@@ -246,13 +246,13 @@ footer{
     padding-left: 50px;
     padding-top: 15px;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     }
 
     /*Add symbols when checkbox is checked*/
     #nav-toggle:checked ~ ul li a {
     position: relative;
-    padding-left: 5px;
+    padding-left: 3px;
     }
 
     #nav-toggle:checked ~ ul li:nth-child(1) a:before {
