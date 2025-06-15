@@ -1,6 +1,7 @@
 html {
     font-size: 1.10em;
     margin: 0;
+    height: 100%;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
             "main"
             "footer";
     grid-template-rows: auto minmax (0, 1fr) auto;
-    min-height: 100vh;
+    height: 100%;
 }
 
 * {
