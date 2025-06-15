@@ -176,6 +176,10 @@ body {
     /*n*/
 }
 
+main {
+    align-items: center;
+}
+
 .box-container{
     margin-top: 0rem;
 }
