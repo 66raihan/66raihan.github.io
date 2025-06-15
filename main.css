@@ -137,6 +137,7 @@ margin-right: 0 auto;
     text-align: right;
     padding-top: 1em;
 }
+
 footer{
     grid-area: footer;
     background: rgba(0, 38, 51, 0.9);
@@ -194,6 +195,19 @@ footer{
         width: 100%;
         min-height: 120px;
         }
+
+    .sub-box1 {
+            justify-content: left;
+            font-size: 0.5em;
+            text-align: right;
+        }
+        
+    .sub-box2 {
+            justify-content: center;
+            font-size: 0.2em;
+            text-align: right;
+            padding-top: 1em;
+    }
 
     nav ul {
     position: fixed;
