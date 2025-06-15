@@ -21,7 +21,7 @@ body {
             "main"
             "footer";
     grid-template-rows: auto minmax (0, 1fr) auto;
-    height: 50%;
+    /*height: 50%;*/
 }
 
 * {
