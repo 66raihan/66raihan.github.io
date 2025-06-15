@@ -58,6 +58,7 @@ input[type="checkbox"]{
 
 .menu-btn::before {
     content: "☰"
+    font-size: 50px;
 }
 
 #nav-toggle:checked + .menu-btn::before {
