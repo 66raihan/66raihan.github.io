@@ -99,10 +99,9 @@ main{
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
-    gap: 2rem;
     padding: 2rem;
-    max-width: 1200px;
-    margin: 10rem auto;
+    min-height: calc(100vh - 80px - 60px);
+    position: relative;
 }
 
 .box-container {
@@ -143,6 +142,22 @@ footer{
     text-align: center;
     padding: 20px;
     font-size: 1em;
+}
+
+@media screen and (min-width: 769px) {
+    main {
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-right: 2rem;
+    }
+
+    .box-container {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        transform: translateX(-50px);
+        margin: 0;
+    }
 }
 
 /* Media query for mobile devices*/
