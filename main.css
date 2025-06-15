@@ -58,7 +58,6 @@ input[type="checkbox"]{
 
 .menu-btn::before {
     content: "☰"
-    font-size: 50px;
 }
 
 #nav-toggle:checked + .menu-btn::before {
@@ -171,6 +170,10 @@ footer{
         display: block;/* Show menu button on mobile*/
         font-size: 20px;
         }
+
+    .menu-btn::before {
+        font-size: 60px;
+    }
 
     body {
     background-image: url(mobileBackground.jpg);
