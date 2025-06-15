@@ -170,8 +170,8 @@ footer{
 body {
     background-image: url (mobileBackground.jpg);
     background-position: center;
-    /*backgroung-size: 50%;
-    background-attachment: scroll;*/
+    background-size: cover;
+    /*background-attachment: scroll;*/
 }
 
 .box-container{
