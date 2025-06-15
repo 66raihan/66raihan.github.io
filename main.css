@@ -175,6 +175,10 @@ footer{
         font-size: 60px;
     }
 
+    #nav-toggle:checked + .menu-btn::before {
+        font-size: 20px
+    }
+
     body {
     background-image: url(mobileBackground.jpg);
     background-position: 30% center;
