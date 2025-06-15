@@ -111,6 +111,7 @@ flex-direction: column;
 gap: 3rem;
 width: 300px;
 margin-right: -40rem;
+padding-right:50%;
 }
 
 .box {
