@@ -169,7 +169,8 @@ footer{
 
 body {
     background-position: 28% center;
-    backgroung-size: 20%; 
+    backgroung-size: 20%;
+    background-attachment: scroll;
 }
 
 .box-container{
@@ -265,4 +266,11 @@ align-items: center;
         font-size: 1.2em;
     }
 
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+       only screen and (min-resolution: 192dpi) {
+    body {
+        background-size: 70%; /* Slightly smaller for high-DPI */
+    }
 }
