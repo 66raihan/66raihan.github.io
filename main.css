@@ -285,12 +285,125 @@ footer{
     
 }
 
-/*For very small screens*/
+/*For very small screens
 @media screen and (max-width: 480px){
-    nav ul li a {
-        font-size: 18px;
+    .menu-btn {
+        display: block;/* Show menu button on mobile
+        font-size: 20px;
+        }
+
+    .menu-btn::before {
+        font-size: 60px;
     }
 
+    #nav-toggle:checked + .menu-btn::before {
+        font-size: 20px
+    }
+
+    body {
+    background-image: url(mobileBackground.jpg);
+    background-position: 30% center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: scroll;
+    }
+
+    main {
+    min-height: calc(100vh - 80px - 40px)
+    }
+
+    .box-container{
+    padding-top: 14rem;
+    width: 50%;
+    gap: 1.5rem;
+    margin: 0 auto;
+    }
+
+    .box {
+        width: 100%;
+        min-height: 80px;
+        padding: 1rem;
+        }
+
+    .sub-box1 {
+            justify-content: left;
+            font-size: 0.9em;
+            text-align: right;
+        }
+        
+    .sub-box2 {
+            justify-content: center;
+            font-size: 0.4em;
+            text-align: right;
+            padding-top: 1em;
+    }
+
+    nav ul {
+    position: fixed;
+    width: 40%;
+    height: 40vh;
+    background: rgba(0, 38, 51, 0.9);
+    top: 0px;
+    right: -100%;
+    text-align: left;
+    transition: all .3s;
+    margin: 0;
+    padding: 20px 0 20px 40px;
+    overflow-y: visible;
+    border-radius: 15px;
+    z-index: 10;
+    }
+
+    nav ul li{
+    display: block;
+    margin: 10px 0;
+    line-height: 30px;
+    }
+ 
+    nav ul li a{
+    font-size: 18px;
+    color: whitesmoke;
+    display: flex;
+    padding-left: 50px;
+    padding-top: 15px;
+    align-items: center;
+    gap: 15px;
+    }
+
+    
+    #nav-toggle:checked ~ ul li a {
+    position: relative;
+    padding-left: 3px;
+    }
+
+    #nav-toggle:checked ~ ul li:nth-child(1) a:before {
+    content: none;
+    }
+
+    #nav-toggle:checked ~ ul li:nth-child(2) a:before {
+    content: none;
+    }
+
+    #nav-toggle:checked ~ ul li:nth-child(3) a:before {
+    content: none;
+    }
+
+    #nav-toggle:checked ~ ul li:nth-child(4) a:before {
+    content: none;
+    }
+
+    
+    #nav-toggle:checked ~ ul {
+    right: 0;
+    }
+
+    footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    }
+    /*
     h1 {
         font-size: 1.5em;
     }
@@ -300,151 +413,35 @@ footer{
     }
 
 }
+*/
 
 @media screen and (max-width:768) and (orientation: landscape) {
     body {
-        background-image: url(background.jpeg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        color:whitesmoke;
-        /*font-size: 1.10em;*/
-        font-family: montserrat;
+        overflow: hidden;
         margin: 0;
-        padding:0;
-        display: grid;
-        grid-template-areas: 
-                "header"
-                "main"
-                "footer";
-        grid-template-rows: auto minmax (0, 1fr) auto;
-        height: 100%;
-    }
-    
-    * {
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        list-style: none;
-        box-sizing: border-box;
-    }
-    
-    nav {
-        grid-area: header;
-        height: 80px; /* increased height for better touch targer */
-        width: 100%;
-        position: relative; /* made the position relative */
-    }
-    
-    /* hide checkbox */
-    input[type="checkbox"]{
-        display: none;
-    }
-    
-    /* Style menu button*/
-    .menu-btn {
-        color: whitesmoke;
-        font-size: 50px;
-        cursor: pointer;
-        display: none;/* hidden on desktop*/
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        z-index: 20;
-    }
-    
-    .menu-btn::before {
-        content: "☰"
-    }
-    
-    #nav-toggle:checked + .menu-btn::before {
-        content: "✕"
-    }
-    
-    nav ul {
-        float: right;
-        margin-right: 20px;
-    }
-    
-    nav ul li {
-        display: inline-block;
-        line-height: 60px; /* adjusted from 80 to match the display height*/
-        margin: 0 5px;
-    }
-    
-    nav ul li a {
-        color: #002633;
-        font-size: 24px; /* reduced from 40 for better scaling*/
-        padding: 7px 13px;
-        border-radius: 3px;
-        font-weight: bold;
-        -webkit-text-stroke: 0.5px rgb(190, 190, 190);
-    
-    }
-    
-    a:hover{
-        background: #6e9dad;
-        transition: .5s;
-    }
-    
-    ion-icon {
-        font-size: 20px;
-        vertical-align: -5%;
-    }
-    
-    main{
-        grid-area: main;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: flex-start;
-        padding: 2rem;
-        min-height: calc(100vh - 80px - 60px);
-        position: relative;
-    }
-    
-    .box-container {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    width: 300px;
-    margin-right: 0 auto;
-    }
-    
-    .box {
-        background: rgba(0,38,51,0.9);
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        width: 100%;
-        min-height: 140px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .sub-box1 {
-        justify-content: left;
-        font-size: 1.5em;
-        text-align: right;
-    }
-    
-    .sub-box2 {
-        justify-content: center;
-        font-size: 1.0em;
-        text-align: right;
-        padding-top: 1em;
+        height: 100vh;
+        width: 100vw;
     }
 
-    footer {
-        /*position: relative;
-        bottom: 0;
-        width: 100%;*/
-        grid-area: footer;
-        background: rgba(0, 38, 51, 0.9);
-        color: whitesmoke;
-        text-align: center;
-        padding: 20px;
-        font-size: 1em;
-    }
+     main {
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding-right: 2rem;
+        }
+
+        .box-container {
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            transform: translateX(-25px);
+            margin: 0;
+        }
+
+        .box {
+            padding: 1rem;
+            border-radius: 4px;
+            width: 50%;
+            min-height: 100px;
+        }
+        
 }
