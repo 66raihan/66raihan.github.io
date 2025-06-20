@@ -276,6 +276,12 @@ footer{
     right: 0;
     }
 
+    footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    }
     
 }
 
@@ -295,3 +301,25 @@ footer{
 
 }
 
+@media screen and (max-width:768) and (orientation: landscape) {
+    body{
+        background-image: url(background.jpeg);
+    }
+
+    main{
+        min-height: calc(100vh - 80px - 40px);
+        padding: 1rem;
+    }
+
+    .box-container {
+        padding-top: 2rem;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
